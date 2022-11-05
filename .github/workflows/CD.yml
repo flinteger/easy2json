@@ -61,6 +61,9 @@ jobs:
       run: |
         ls -lh out
 
+        ./scripts/summary.sh > out/summary.txt
+        cat out/summary.txt
+
     - name: Git config
       run: |
         git config --local user.email "CD@github-action"
@@ -72,7 +75,7 @@ jobs:
 
         rm -fr blocklists lists
         mkdir -p lists
-        cp -fv out/*.zip lists/
+        cp -fv out/*.zip out/summary.txt lists/
 
         date +%s > lists/version.txt
 

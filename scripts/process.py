@@ -8,8 +8,8 @@ from zipfile import ZipFile, ZIP_DEFLATED
 
 def process_list(list: dict):
     # print(list)
-    url = list["url"]
-    out = list["out"]
+    url = list["url"]   # source URL
+    out = list["out"]   # json output filename
     # print(url, out)
     print(f"Downloading {url}")
     response = requests.get(url, timeout=30)
@@ -22,12 +22,14 @@ def process_list(list: dict):
     with open(f"data/{basename}", "w") as f:
         f.write(body)
 
-    print(f"Converting data/{basename}")
+    print(f"Converting data/{basename} to out/{out}")
     subprocess.run(f"node abp2blocklist.js < data/{basename} > out/{out}", shell=True)
 
     if os.path.exists(f"out/{out}"):
+        # compress to reduce file size.
         with ZipFile(f"out/{out}.zip", "w", ZIP_DEFLATED) as zip:
             zip.write(f"out/{out}", out)
+
 
 def process(lists: dict):
     for list in lists:
