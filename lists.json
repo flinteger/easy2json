@@ -1,0 +1,185 @@
+[
+    {
+        "name": "EasyList",
+        "description": "",
+        "author": "",
+        "url": "https://easylist.to/easylist/easylist.txt",
+        "out": "easylist.json"
+    },
+    {
+        "name": "EasyPrivacy",
+        "description": "",
+        "author": "",
+        "url": "https://easylist.to/easylist/easyprivacy.txt",
+        "out": "easyprivacy.json"
+    },
+    {
+        "name": "EasyList Cookie List",
+        "description": "EasyList Cookie List blocks cookies banners, GDPR overlay windows and other privacy-related notices.",
+        "author": "Fanboy",
+        "url": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+        "out": "easycookie.json"
+    },
+    {
+        "name": "Fanboy's Social Blocking List",
+        "description": "Fanboy's Social Blocking List solely removes Social Media content on web pages such as the Facebook like button and other widgets.",
+        "author": "Fanboy",
+        "url": "https://easylist.to/easylist/fanboy-social.txt",
+        "out": "easysocial.json"
+    },
+    {
+        "name": "Fanboy's Annoyance List",
+        "description": "",
+        "author": "Fanboy",
+        "url": "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
+        "out": "easyannonyance.json"
+    },
+    {
+        "name": "EasyList Germany",
+        "description": "EasyList Germany is a filter list written by the EasyList authors MonztA, Famlam and Khrin that specifically removes adverts on German language websites.",
+        "author": "",
+        "url": "https://easylist.to/easylistgermany/easylistgermany.txt",
+        "out": "easygermany.json"
+    },
+    {
+        "name": "EasyList Italy",
+        "description": "",
+        "author": "",
+        "url": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
+        "out": "easyitaly.json"
+    },
+    {
+        "name": "EasyList Dutch",
+        "description": "",
+        "author": "",
+        "url": "https://easylist-downloads.adblockplus.org/easylistdutch.txt",
+        "out": "easydutch.json"
+    },
+    {
+        "name": "Liste FR",
+        "description": "",
+        "author": "",
+        "url": "https://easylist-downloads.adblockplus.org/liste_fr.txt",
+        "out": "easyfrench.json"
+    },
+    {
+        "name": "EasyList China",
+        "description": "",
+        "author": "",
+        "url": "https://easylist-downloads.adblockplus.org/easylistchina.txt",
+        "out": "easychina.json"
+    },
+    {
+        "name": "RU AdList",
+        "description": "",
+        "author": "",
+        "category": "language",
+        "language": "Russia, Ukrainian",
+        "url": "https://easylist-downloads.adblockplus.org/advblock.txt",
+        "out": "easyru.json"
+    },
+    {
+        "name": "Bulgarian list",
+        "description": "",
+        "author": "",
+        "url": "http://stanev.org/abp/adblock_bg.txt",
+        "out": "easybg.json"
+    },
+    {
+        "name": "ABPindo",
+        "description": "",
+        "author": "",
+        "url": "https://raw.githubusercontent.com/heradhis/indonesianadblockrules/master/subscriptions/abpindo.txt",
+        "out": "easyindo.json"
+    },
+    {
+        "name": "Liste AR",
+        "description": "",
+        "author": "",
+        "url": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
+        "out": "easyar.json"
+    },
+    {
+        "name": "EasyList Czech and Slovak",
+        "description": "",
+        "author": "",
+        "url": "https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt",
+        "out": "easyczechslovak.json"
+    },
+    {
+        "name": "Latvian List",
+        "description": "",
+        "author": "",
+        "url": "https://raw.githubusercontent.com/Latvian-List/adblock-latvian/master/lists/latvian-list.txt",
+        "out": "easylatvian.json"
+    },
+    {
+        "name": "EasyList Hebrew",
+        "description": "",
+        "author": "",
+        "url": "https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt",
+        "out": "easyhebrew.json"
+    },
+    {
+        "name": "Dandelion Sprout's Nordic Filters",
+        "description": "",
+        "author": "",
+        "url": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersABP-Inclusion.txt",
+        "out": "easynordic.json"
+    },
+    {
+        "name": "EasyList Lithuania",
+        "description": "",
+        "author": "",
+        "url": "https://raw.githubusercontent.com/EasyList-Lithuania/easylist_lithuania/master/easylistlithuania.txt",
+        "out": "easylithunia.json"
+    },
+    {
+        "name": "EasyList Spanish",
+        "description": "",
+        "author": "",
+        "category": "language",
+        "url": "https://easylist-downloads.adblockplus.org/easylistspanish.txt",
+        "out": "easyspanish.json"
+    },
+    {
+        "name": "ABPVN List",
+        "description": "ABPVN List is an affiliated filter list written by Hoàng Rio that specifically removes adverts on Tiếng Việt language websites.",
+        "author": "",
+        "category": "language",
+        "url": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt",
+        "out": "easyindo.json"
+    },
+    {
+        "name": "EasyList Polish",
+        "description": "",
+        "author": "",
+        "category": "language",
+        "url": "https://easylist-downloads.adblockplus.org/easylistpolish.txt",
+        "out": "easypolish.json"
+    },
+    {
+        "name": "IndianList",
+        "description": "IndianList is an affiliated filter list written by mediumkreation that specifically removes adverts on বাংলা (ভারত), ગુજરાતી (ભારત), भारतीय, ਪੰਜਾਬੀ (ਭਾਰਤ), অসমীয়া, मराठी, മലയാളം, తెలుగు, ಕನ್ನಡ, ଓଡ଼ିଆ, नेपाली, සිංහල language websites.",
+        "author": "",
+        "category": "language",
+        "url": "https://easylist-downloads.adblockplus.org/indianlist.txt",
+        "out": "easyindian.json"
+    },
+    {
+        "name": "KoreanList",
+        "description": "",
+        "author": "",
+        "category": "language",
+        "url": "https://easylist-downloads.adblockplus.org/koreanlist.txt",
+        "out": "easykorean.json"
+    },
+    {
+        "name": "ROList",
+        "description": "ROList is an affiliated filter list written by MenetZ and Zoso that specifically removes adverts on românesc language websites.",
+        "author": "",
+        "category": "language",
+        "url": "https://www.zoso.ro/pages/rolist.txt",
+        "out": "easyro.json"
+    }
+]
