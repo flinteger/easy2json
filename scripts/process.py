@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import os
+import logging
 import json
 import requests
 import subprocess
@@ -11,10 +12,10 @@ def process_list(list: dict):
     url = list["url"]   # source URL
     out = list["out"]   # json output filename
     # print(url, out)
-    print(f"Downloading {url}")
+    logging.info(f"Downloading {url}")
     response = requests.get(url, timeout=30)
     if response.status_code != 200:
-        print(f"Got error. status_code={response.status_code} url={url}")
+        logging.error(f"Got error. status_code={response.status_code} url={url}")
         return
 
     body = response.text
@@ -22,7 +23,7 @@ def process_list(list: dict):
     with open(f"data/{basename}", "w") as f:
         f.write(body)
 
-    print(f"Converting data/{basename} to out/{out}")
+    logging.info(f"Converting data/{basename} to out/{out}")
     subprocess.run(f"node abp2blocklist.js < data/{basename} > out/{out}", shell=True)
 
     if os.path.exists(f"out/{out}"):
@@ -36,7 +37,19 @@ def process(lists: dict):
         process_list(list)
 
 
+def setup_logging():
+    datefmt = "%Y-%m-%dT%H:%M:%S%Z"
+    # format = "%(asctime)s pid=%(process)d tid=%(thread)d logger=%(name)s level=%(levelname)s %(message)s"
+    # format = "%(asctime)s %(thread)d %(levelname)s %(message)s"
+    format = "%(asctime)s %(levelname)s %(message)s"
+    logging.basicConfig(
+        # filename='process.log',
+        level=logging.INFO,
+        datefmt=datefmt,
+        format=format)
+
 def main():
+    setup_logging()
     dirs = ["data", "out"]
     for dir in dirs:
         if not os.path.exists(dir):
