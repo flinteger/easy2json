@@ -57,6 +57,11 @@ jobs:
       run: |
         ./scripts/process.py
 
+        cat data/*.txt > data/all.txt
+        node abp2blocklist.js < data/all.txt > data/all.json
+        echo "Combined:"
+        grep action data/all.json | wc -l
+
     - name: Check output
       run: |
         ls -lh out
