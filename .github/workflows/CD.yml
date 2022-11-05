@@ -36,6 +36,9 @@ jobs:
         echo "HOME: $HOME"
         echo "SHELL: $SHELL"
         echo "PATH: $PATH"
+        df -h
+        cat /proc/cpuinfo
+        vmstat -S M
         python3 --version
         pip3 --version
         mkdir -p cache
@@ -67,12 +70,14 @@ jobs:
       run: |
         git checkout --orphan release
 
-        rm -fr blocklists
-        mkdir -p blocklists
-        cp -fv out/*.zip blocklists/
+        rm -fr *
+        mkdir -p lists
+        cp -fv out/*.zip lists/
 
-        git add blocklists
-        git commit -m "Update blocklists from upstream" blocklists
+        date +%s > lists/version.txt
+
+        git add lists
+        git commit -m "Update lists" lists
 
     - name: Force push data branch changes
       uses: ad-m/github-push-action@master
