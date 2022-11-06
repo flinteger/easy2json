@@ -1,6 +1,9 @@
 name: CD
 
 on:
+  push:
+    branches: [ master ]
+
   schedule:
   # build once every Monday
   - cron: "0 0 1 * *"
@@ -87,7 +90,7 @@ jobs:
         date +%s > lists/version.txt
 
         git add lists LICENSE-CC-BY-3.0.txt
-        git commit -m "Update lists" lists
+        git commit -m "Update lists" lists LICENSE-CC-BY-3.0.txt
 
     - name: Force push data branch changes
       uses: ad-m/github-push-action@master
