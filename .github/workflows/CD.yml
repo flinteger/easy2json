@@ -78,13 +78,15 @@ jobs:
       run: |
         git checkout --orphan release
 
+        ls -l
+
         rm -fr blocklists lists
         mkdir -p lists
-        cp -fv out/*.zip out/summary.txt lists/
+        cp -fv lists.json out/*.zip out/summary.txt lists/
 
         date +%s > lists/version.txt
 
-        git add lists
+        git add lists LICENSE-CC-BY-3.0.txt
         git commit -m "Update lists" lists
 
     - name: Force push data branch changes

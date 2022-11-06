@@ -18,5 +18,6 @@ node abp2blocklist.js < easylist.txt > blockerList.json
 
 ## License
 
-- abp2blocklist.js and files in `lib` directory is the same as abp2blocklist: GLP v3.
-- easylist.json and files in `scripts` directory is BSD-3.
+- abp2blocklist.js and files in `lib` directory is the same as abp2blocklist: [GLP v3](LICENSE-GPLv3.txt).
+- easylist.json and files in `scripts` directory is [BSD](LICENSE-BSD.txt).
+- blocklist files is [CC-BY-3.0](LICENSE-CC-BY-3.0.txt).
