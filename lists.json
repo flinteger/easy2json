@@ -2,7 +2,7 @@
     {
         "name": "EasyList",
         "id": "easylist",
-        "description": "",
+        "description": "EasyList is the primary filter list that removes most adverts from international webpages, including unwanted frames, images and objects. It is the most popular list used by many ad blockers and forms the basis of over a dozen combination and supplementary filter lists.",
         "author": "",
         "url": "https://easylist.to/easylist/easylist.txt",
         "out": "easylist.json"
@@ -10,7 +10,7 @@
     {
         "name": "EasyPrivacy",
         "id": "easyprivacy",
-        "description": "",
+        "description": "EasyPrivacy is an optional supplementary filter list that completely removes all forms of tracking from the internet, including web bugs, tracking scripts and information collectors, thereby protecting your personal data.",
         "author": "",
         "url": "https://easylist.to/easylist/easyprivacy.txt",
         "out": "easyprivacy.json"
@@ -34,7 +34,7 @@
     {
         "name": "Fanboy's Annoyance List",
         "id": "easyannoyance",
-        "description": "",
+        "description": "Fanboy's Annoyance List blocks Social Media content, in-page pop-ups and other annoyances; thereby substantially decreasing web page loading times and uncluttering them. EasyList Cookie List and Fanboy's Social Blocking List are already included, there is no need to subscribe to them if you already have Fanboy's Annoyance List.",
         "author": "Fanboy",
         "url": "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
         "out": "easyannonyance.json"
@@ -76,6 +76,8 @@
         "id": "cn",
         "description": "EasyList China is an affiliated filter list written by John and Li that specifically removes adverts on Chinese language websites.",
         "author": "",
+        "category": "language",
+        "language": "Chinese",
         "url": "https://easylist-downloads.adblockplus.org/easylistchina.txt",
         "out": "easychina.json"
     },
@@ -169,16 +171,17 @@
         "author": "",
         "category": "language",
         "url": "https://easylist-downloads.adblockplus.org/easylistportuguese.txt",
-        "out": "easyspanish.json"
+        "out": "easypt.json"
     },
     {
         "name": "ABPVN List",
-        "id": "indo",
+        "id": "vn",
         "description": "ABPVN List is an affiliated filter list written by Hoàng Rio that specifically removes adverts on Tiếng Việt language websites.",
         "author": "",
         "category": "language",
+        "language": "Vietnamese",
         "url": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt",
-        "out": "easyindo.json"
+        "out": "easyvn.json"
     },
     {
         "name": "EasyList Polish",
