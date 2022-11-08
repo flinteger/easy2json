@@ -1,41 +1,51 @@
 [
     {
         "name": "EasyList",
+        "title": "Ad Blocking",
         "id": "easylist",
         "description": "EasyList is the primary filter list that removes most adverts from international webpages, including unwanted frames, images and objects. It is the most popular list used by many ad blockers and forms the basis of over a dozen combination and supplementary filter lists.",
         "author": "",
+        "category": "general",
         "url": "https://easylist.to/easylist/easylist.txt",
         "out": "easylist.json"
     },
     {
         "name": "EasyPrivacy",
+        "title": "Privacy",
         "id": "easyprivacy",
         "description": "EasyPrivacy is an optional supplementary filter list that completely removes all forms of tracking from the internet, including web bugs, tracking scripts and information collectors, thereby protecting your personal data.",
         "author": "",
+        "category": "privacy",
         "url": "https://easylist.to/easylist/easyprivacy.txt",
         "out": "easyprivacy.json"
     },
     {
         "name": "EasyList Cookie List",
+        "title": "Cookie Notice",
         "id": "easycookie",
         "description": "EasyList Cookie List blocks cookies banners, GDPR overlay windows and other privacy-related notices.",
         "author": "Fanboy",
+        "category": "privacy",
         "url": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
         "out": "easycookie.json"
     },
     {
         "name": "Fanboy's Social Blocking List",
+        "title": "Social Blocking",
         "id": "easysocial",
         "description": "Fanboy's Social Blocking List solely removes Social Media content on web pages such as the Facebook like button and other widgets.",
         "author": "Fanboy",
+        "category": "general",
         "url": "https://easylist.to/easylist/fanboy-social.txt",
         "out": "easysocial.json"
     },
     {
         "name": "Fanboy's Annoyance List",
+        "title": "Annoyance",
         "id": "easyannoyance",
         "description": "Fanboy's Annoyance List blocks Social Media content, in-page pop-ups and other annoyances; thereby substantially decreasing web page loading times and uncluttering them. EasyList Cookie List and Fanboy's Social Blocking List are already included, there is no need to subscribe to them if you already have Fanboy's Annoyance List.",
         "author": "Fanboy",
+        "category": "general",
         "url": "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
         "out": "easyannonyance.json"
     },
@@ -44,6 +54,8 @@
         "id": "de",
         "description": "EasyList Germany is a filter list written by the EasyList authors MonztA, Famlam and Khrin that specifically removes adverts on German language websites.",
         "author": "",
+        "category": "language",
+        "language": "German",
         "url": "https://easylist.to/easylistgermany/easylistgermany.txt",
         "out": "easygermany.json"
     },
@@ -52,6 +64,8 @@
         "id": "it",
         "description": "EasyList Italy is a filter list written by the EasyList author Khrin that specifically removes adverts on Italian language websites.",
         "author": "",
+        "category": "language",
+        "language": "Italian",
         "url": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
         "out": "easyitaly.json"
     },
@@ -60,6 +74,8 @@
         "id": "dutch",
         "description": "EasyList Dutch is an affiliated filter list written by the EasyList author Famlam that specifically removes adverts on Dutch language websites.",
         "author": "",
+        "category": "language",
+        "language": "Dutch",
         "url": "https://easylist-downloads.adblockplus.org/easylistdutch.txt",
         "out": "easydutch.json"
     },
@@ -68,6 +84,8 @@
         "id": "fr",
         "description": "Liste FR is an affiliated filter list written by Lian, Crits and smed79 that specifically removes adverts on French language websites.",
         "author": "",
+        "category": "language",
+        "language": "French",
         "url": "https://easylist-downloads.adblockplus.org/liste_fr.txt",
         "out": "easyfrench.json"
     },
@@ -96,6 +114,8 @@
         "id": "bg",
         "description": "Bulgarian list is an affiliated filter list written by Alex that specifically removes adverts on Bulgarian language websites.",
         "author": "",
+        "category": "language",
+        "language": "Bulgarian",
         "url": "http://stanev.org/abp/adblock_bg.txt",
         "out": "easybg.json"
     },
@@ -104,6 +124,8 @@
         "id": "indo",
         "description": "ABPindo is an affiliated filter list written by hermawan that specifically removes adverts on Indonesian language websites.",
         "author": "",
+        "category": "language",
+        "language": "Indonesian",
         "url": "https://raw.githubusercontent.com/heradhis/indonesianadblockrules/master/subscriptions/abpindo.txt",
         "out": "easyindo.json"
     },
@@ -112,6 +134,8 @@
         "id": "ar",
         "description": "Liste AR is an affiliated filter list written by smed79 and Crits that specifically removes adverts on Arabic language websites.",
         "author": "",
+        "category": "language",
+        "language": "Arabic",
         "url": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
         "out": "easyar.json"
     },
@@ -120,6 +144,8 @@
         "id": "cz-sk",
         "description": "EasyList Czech and Slovak is an affiliated filter list written by tomasko126 that specifically removes adverts on Czech and Slovak language websites.",
         "author": "",
+        "category": "language",
+        "language": "Czech, Slovak",
         "url": "https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt",
         "out": "easyczechslovak.json"
     },
@@ -128,6 +154,8 @@
         "id": "lv",
         "description": "Latvian List is an affiliated filter list written by anonymous74100 that specifically removes adverts on Latvian language websites.",
         "author": "",
+        "category": "language",
+        "language": "Latvian",
         "url": "https://raw.githubusercontent.com/Latvian-List/adblock-latvian/master/lists/latvian-list.txt",
         "out": "easylatvian.json"
     },
@@ -136,6 +164,8 @@
         "id": "hebrew",
         "description": "EasyList Hebrew is an affiliated filter list written by BsT that specifically removes adverts on Hebrew language websites.",
         "author": "",
+        "category": "language",
+        "language": "Hebrew",
         "url": "https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt",
         "out": "easyhebrew.json"
     },
@@ -144,6 +174,8 @@
         "id": "nordic",
         "description": "Dandelion Sprout's Nordic Filters is an affiliated filter list written by Imre Kristoffer Eilertsen that specifically removes adverts on norsk, norsk, norsk, dansk, íslenska, føroyskt, kalaallisut, suomi language websites.",
         "author": "",
+        "category": "language",
+        "language": "Nordic",
         "url": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersABP-Inclusion.txt",
         "out": "easynordic.json"
     },
@@ -152,6 +184,8 @@
         "id": "lt",
         "description": "EasyList Lithuania is an affiliated filter list written by Imre Kristoffer Eilertsen that specifically removes adverts on Lithuanian language websites.",
         "author": "",
+        "category": "language",
+        "language": "Lithuanian",
         "url": "https://raw.githubusercontent.com/EasyList-Lithuania/easylist_lithuania/master/easylistlithuania.txt",
         "out": "easylithunia.json"
     },
@@ -161,6 +195,7 @@
         "description": "EasyList Spanish is an affiliated filter list written by Felippe Santos that specifically removes adverts on español language websites.",
         "author": "",
         "category": "language",
+        "language": "Spanish",
         "url": "https://easylist-downloads.adblockplus.org/easylistspanish.txt",
         "out": "easyspanish.json"
     },
@@ -170,6 +205,7 @@
         "description": "EasyList Portuguese is an affiliated filter list written by Felippe Santos that specifically removes adverts on português language websites.",
         "author": "",
         "category": "language",
+        "language": "Portuguese",
         "url": "https://easylist-downloads.adblockplus.org/easylistportuguese.txt",
         "out": "easypt.json"
     },
@@ -189,6 +225,7 @@
         "description": "EasyList Polish is an affiliated filter list written by bartoszsobkowiak and mateuszfranckiewicz that specifically removes adverts on polski language websites.",
         "author": "",
         "category": "language",
+        "language": "Polski",
         "url": "https://easylist-downloads.adblockplus.org/easylistpolish.txt",
         "out": "easypolish.json"
     },
@@ -198,6 +235,7 @@
         "description": "IndianList is an affiliated filter list written by mediumkreation that specifically removes adverts on বাংলা (ভারত), ગુજરાતી (ભારત), भारतीय, ਪੰਜਾਬੀ (ਭਾਰਤ), অসমীয়া, मराठी, മലയാളം, తెలుగు, ಕನ್ನಡ, ଓଡ଼ିଆ, नेपाली, සිංහල language websites.",
         "author": "",
         "category": "language",
+        "language": "Indian",
         "url": "https://easylist-downloads.adblockplus.org/indianlist.txt",
         "out": "easyindian.json"
     },
@@ -207,6 +245,7 @@
         "description": "KoreanList is an affiliated filter list written by Mark Choi that specifically removes adverts on 한국어 language websites.",
         "author": "",
         "category": "language",
+        "language": "Korean",
         "url": "https://easylist-downloads.adblockplus.org/koreanlist.txt",
         "out": "easykorean.json"
     },
@@ -216,6 +255,7 @@
         "description": "ROList is an affiliated filter list written by MenetZ and Zoso that specifically removes adverts on românesc language websites.",
         "author": "",
         "category": "language",
+        "language": "Romanian",
         "url": "https://www.zoso.ro/pages/rolist.txt",
         "out": "easyro.json"
     }
