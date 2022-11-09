@@ -1,0 +1,2 @@
+www.baidu.com##div[class=_2z1q32z]
+www.baidu.com##div[class*="result"]:has(a[href^="http://www.baidu.com/baidu.php"])

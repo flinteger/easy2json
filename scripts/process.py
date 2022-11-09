@@ -8,10 +8,10 @@ import subprocess
 from zipfile import ZipFile, ZIP_DEFLATED
 
 def process_list(list: dict):
-    # print(list)
     url = list["url"]   # source URL
-    out = list["out"]   # json output filename
-    # print(url, out)
+    out = list["out"]   # json output filename. e.g. easylist.json
+    extra = out.split(".")[0] + ".txt"  # optional extra rules
+
     logging.info(f"Downloading {url}")
     response = requests.get(url, timeout=30)
     if response.status_code != 200:
@@ -22,6 +22,13 @@ def process_list(list: dict):
     basename = os.path.basename(url)
     with open(f"data/{basename}", "w") as f:
         f.write(body)
+
+        if os.path.exists(f"extra/{extra}"):
+            # Append extra rules if exist.
+            logging.info(f"Appending extra/{extra} to data/{basename}")
+            with open(f"extra/{extra}") as ex:
+                f.write("\n")
+                f.write(ex.read())
 
     logging.info(f"Converting data/{basename} to out/{out}")
     subprocess.run(f"node abp2blocklist.js < data/{basename} > out/{out}", shell=True)
@@ -57,8 +64,20 @@ def main():
 
     with open('lists.json') as f:
         lists = json.load(f)
+        import sys
+        input_list = sys.argv[1:]
+        print(input_list)
+        if len(input_list) != 0:
+            lists = list(filter(lambda list: list["id"] in input_list, lists))
+            print(lists)
         process(lists)
 
 
 if __name__ == '__main__':
+    """
+    Usage:
+        ./scripts/process.py
+        ./scripts/process.py <id>...
+        ./scripts/process.py fr sp
+    """
     main()
