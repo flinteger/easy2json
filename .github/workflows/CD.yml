@@ -83,14 +83,16 @@ jobs:
 
         ls -l
 
-        rm -fr blocklists lists
+        rm -fr lists
         mkdir -p lists
         cp -fv lists.json out/*.zip out/summary.txt lists/
 
-        date +%s > lists/version.txt
-
-        git add lists LICENSE-CC-BY-3.0.txt
-        git commit -m "Update lists" lists LICENSE-CC-BY-3.0.txt
+        now=$(date +%s)
+        echo $now > lists/version.txt
+        cp -fv lists/version.txt index.html
+        git add lists LICENSE-CC-BY-3.0.txt index.html
+        git commit -m "Update lists to $now" lists LICENSE-CC-BY-3.0.txt index.html
+        echo "now=$now"
 
     - name: Force push data branch changes
       uses: ad-m/github-push-action@master
