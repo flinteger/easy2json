@@ -6,37 +6,59 @@ import json
 import requests
 import subprocess
 from zipfile import ZipFile, ZIP_DEFLATED
+from merge import merge
 
 def process_list(list: dict):
-    url = list["url"]   # source URL
+    urls = []
+    if "urls" in list:
+        urls = list["urls"]
+    else:
+        url = list["url"]   # source URL
+        urls.append(url)
+
     out = list["out"]   # json output filename. e.g. easylist.json
-    extra = out.split(".")[0] + ".txt"  # optional extra rules
+    outjson = os.path.join("out", out)  # e.g. out/easylist.json
+    outtxt = os.path.join("out", out.split(".")[0] + ".txt")
 
-    logging.info(f"Downloading {url}")
-    response = requests.get(url, timeout=30)
-    if response.status_code != 200:
-        logging.error(f"Got error. status_code={response.status_code} url={url}")
-        return
+    extratxt = os.path.join("extra", out.split(".")[0] + ".txt")  # optional extra rules
 
-    body = response.text
-    basename = os.path.basename(url)
-    with open(f"data/{basename}", "w") as f:
-        f.write(body)
+    if os.path.exists(outtxt):
+        # delete old file if exist.
+        os.unlink(outtxt)
 
-        if os.path.exists(f"extra/{extra}"):
-            # Append extra rules if exist.
-            logging.info(f"Appending extra/{extra} to data/{basename}")
-            with open(f"extra/{extra}") as ex:
-                f.write("\n")
-                f.write(ex.read())
+    merged = []     # merged rules
+    skipped = 0     # skipped rules count
+    for url in urls:
+        logging.info(f"Downloading {url}")
+        response = requests.get(url, timeout=30)
+        if response.status_code != 200:
+            logging.error(f"Got error. status_code={response.status_code} url={url}")
+            return
 
-    logging.info(f"Converting data/{basename} to out/{out}")
-    subprocess.run(f"node abp2blocklist.js < data/{basename} > out/{out}", shell=True)
+        body = response.text
+        lines = body.splitlines(keepends=False)
+        skipped += merge(merged, lines)
+        logging.info(f"Processed rules in {url}. skipped={skipped}")
 
-    if os.path.exists(f"out/{out}"):
+    if os.path.exists(extratxt):
+        # Append extra rules if exist.
+        logging.info(f"Merging {extratxt}")
+        with open(extratxt) as f:
+            list = f.readlines()
+            skipped += merge(merged, list)
+
+    with open(outtxt, "w") as f:
+        f.write("\n".join(merged))
+
+    logging.info(f"Wrote {outtxt}, lines={len(merged)} skipped={skipped}")
+
+    logging.info(f"Converting {outtxt} to {outjson}")
+    subprocess.run(f"node abp2blocklist.js < {outtxt} > {outjson}", shell=True)
+
+    if os.path.exists(outjson):
         # compress to reduce file size.
-        with ZipFile(f"out/{out}.zip", "w", ZIP_DEFLATED) as zip:
-            zip.write(f"out/{out}", out)
+        with ZipFile(f"{outjson}.zip", "w", ZIP_DEFLATED) as zip:
+            zip.write(outjson, out)
 
 
 def process(lists: dict):
@@ -66,10 +88,9 @@ def main():
         lists = json.load(f)
         import sys
         input_list = sys.argv[1:]
-        print(input_list)
         if len(input_list) != 0:
             lists = list(filter(lambda list: list["id"] in input_list, lists))
-            print(lists)
+            # print(lists)
         process(lists)
 
 

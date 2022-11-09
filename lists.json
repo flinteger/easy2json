@@ -50,6 +50,19 @@
         "out": "easyannonyance.json"
     },
     {
+        "name": "General",
+        "id": "base",
+        "title": "General",
+        "description": "TODO",
+        "category": "general",
+        "urls": [
+            "https://easylist.to/easylist/easylist.txt",
+            "https://easylist.to/easylist/easyprivacy.txt",
+            "https://secure.fanboy.co.nz/fanboy-annoyance.txt"
+        ],
+        "out": "easybase.json"
+    },
+    {
         "name": "EasyList Germany",
         "id": "de",
         "description": "EasyList Germany is a filter list written by the EasyList authors MonztA, Famlam and Khrin that specifically removes adverts on German language websites.",

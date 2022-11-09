@@ -3,4 +3,5 @@ node_modules
 /Pipfile.lock
 /data
 /out
-
+/merged.txt
+/merged.json
