@@ -9,13 +9,7 @@ from zipfile import ZipFile, ZIP_DEFLATED
 from merge import merge
 
 def process_list(list: dict):
-    urls = []
-    if "urls" in list:
-        urls = list["urls"]
-    else:
-        url = list["url"]   # source URL
-        urls.append(url)
-
+    urls = list["urls"]
     out = list["out"]   # json output filename. e.g. easylist.json
     outjson = os.path.join("out", out)  # e.g. out/easylist.json
     outtxt = os.path.join("out", out.split(".")[0] + ".txt")

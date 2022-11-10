@@ -6,7 +6,9 @@
         "description": "EasyList is the primary filter list that removes most adverts from international webpages, including unwanted frames, images and objects. It is the most popular list used by many ad blockers and forms the basis of over a dozen combination and supplementary filter lists.",
         "author": "",
         "category": "general",
-        "url": "https://easylist.to/easylist/easylist.txt",
+        "urls": [
+            "https://easylist.to/easylist/easylist.txt"
+        ],
         "out": "easylist.json"
     },
     {
@@ -16,7 +18,9 @@
         "description": "EasyPrivacy is an optional supplementary filter list that completely removes all forms of tracking from the internet, including web bugs, tracking scripts and information collectors, thereby protecting your personal data.",
         "author": "",
         "category": "privacy",
-        "url": "https://easylist.to/easylist/easyprivacy.txt",
+        "urls": [
+            "https://easylist.to/easylist/easyprivacy.txt"
+        ],
         "out": "easyprivacy.json"
     },
     {
@@ -26,7 +30,9 @@
         "description": "EasyList Cookie List blocks cookies banners, GDPR overlay windows and other privacy-related notices.",
         "author": "Fanboy",
         "category": "privacy",
-        "url": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+        "urls": [
+            "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt"
+        ],
         "out": "easycookie.json"
     },
     {
@@ -36,7 +42,9 @@
         "description": "Fanboy's Social Blocking List solely removes Social Media content on web pages such as the Facebook like button and other widgets.",
         "author": "Fanboy",
         "category": "general",
-        "url": "https://easylist.to/easylist/fanboy-social.txt",
+        "urls": [
+            "https://easylist.to/easylist/fanboy-social.txt"
+        ],
         "out": "easysocial.json"
     },
     {
@@ -46,13 +54,15 @@
         "description": "Fanboy's Annoyance List blocks Social Media content, in-page pop-ups and other annoyances; thereby substantially decreasing web page loading times and uncluttering them. EasyList Cookie List and Fanboy's Social Blocking List are already included, there is no need to subscribe to them if you already have Fanboy's Annoyance List.",
         "author": "Fanboy",
         "category": "general",
-        "url": "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
+        "urls": [
+            "https://secure.fanboy.co.nz/fanboy-annoyance.txt"
+        ],
         "out": "easyannonyance.json"
     },
     {
-        "name": "General",
-        "id": "base",
-        "title": "General",
+        "name": "EasyCombined",
+        "id": "easybase",
+        "title": "Base Rules",
         "description": "TODO",
         "category": "general",
         "urls": [
@@ -69,7 +79,9 @@
         "author": "",
         "category": "language",
         "language": "German",
-        "url": "https://easylist.to/easylistgermany/easylistgermany.txt",
+        "urls": [
+            "https://easylist.to/easylistgermany/easylistgermany.txt"
+        ],
         "out": "easygermany.json"
     },
     {
@@ -79,7 +91,9 @@
         "author": "",
         "category": "language",
         "language": "Italian",
-        "url": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
+        "urls": [
+            "https://easylist-downloads.adblockplus.org/easylistitaly.txt"
+        ],
         "out": "easyitaly.json"
     },
     {
@@ -89,7 +103,9 @@
         "author": "",
         "category": "language",
         "language": "Dutch",
-        "url": "https://easylist-downloads.adblockplus.org/easylistdutch.txt",
+        "urls": [
+            "https://easylist-downloads.adblockplus.org/easylistdutch.txt"
+        ],
         "out": "easydutch.json"
     },
     {
@@ -99,7 +115,9 @@
         "author": "",
         "category": "language",
         "language": "French",
-        "url": "https://easylist-downloads.adblockplus.org/liste_fr.txt",
+        "urls": [
+            "https://easylist-downloads.adblockplus.org/liste_fr.txt"
+        ],
         "out": "easyfrench.json"
     },
     {
@@ -109,7 +127,9 @@
         "author": "",
         "category": "language",
         "language": "Chinese",
-        "url": "https://easylist-downloads.adblockplus.org/easylistchina.txt",
+        "urls": [
+            "https://easylist-downloads.adblockplus.org/easylistchina.txt"
+        ],
         "out": "easychina.json"
     },
     {
@@ -119,7 +139,9 @@
         "author": "",
         "category": "language",
         "language": "Russia, Ukrainian",
-        "url": "https://easylist-downloads.adblockplus.org/advblock.txt",
+        "urls": [
+            "https://easylist-downloads.adblockplus.org/advblock.txt"
+        ],
         "out": "easyru.json"
     },
     {
@@ -129,7 +151,9 @@
         "author": "",
         "category": "language",
         "language": "Bulgarian",
-        "url": "http://stanev.org/abp/adblock_bg.txt",
+        "urls": [
+            "http://stanev.org/abp/adblock_bg.txt"
+        ],
         "out": "easybg.json"
     },
     {
@@ -139,7 +163,9 @@
         "author": "",
         "category": "language",
         "language": "Indonesian",
-        "url": "https://raw.githubusercontent.com/heradhis/indonesianadblockrules/master/subscriptions/abpindo.txt",
+        "urls": [
+            "https://raw.githubusercontent.com/heradhis/indonesianadblockrules/master/subscriptions/abpindo.txt"
+        ],
         "out": "easyindo.json"
     },
     {
@@ -149,7 +175,9 @@
         "author": "",
         "category": "language",
         "language": "Arabic",
-        "url": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
+        "urls": [
+            "https://easylist-downloads.adblockplus.org/Liste_AR.txt"
+        ],
         "out": "easyar.json"
     },
     {
@@ -159,7 +187,9 @@
         "author": "",
         "category": "language",
         "language": "Czech, Slovak",
-        "url": "https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt",
+        "urls": [
+            "https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt"
+        ],
         "out": "easyczechslovak.json"
     },
     {
@@ -169,7 +199,9 @@
         "author": "",
         "category": "language",
         "language": "Latvian",
-        "url": "https://raw.githubusercontent.com/Latvian-List/adblock-latvian/master/lists/latvian-list.txt",
+        "urls": [
+            "https://raw.githubusercontent.com/Latvian-List/adblock-latvian/master/lists/latvian-list.txt"
+        ],
         "out": "easylatvian.json"
     },
     {
@@ -179,7 +211,9 @@
         "author": "",
         "category": "language",
         "language": "Hebrew",
-        "url": "https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt",
+        "urls": [
+            "https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt"
+        ],
         "out": "easyhebrew.json"
     },
     {
@@ -189,7 +223,9 @@
         "author": "",
         "category": "language",
         "language": "Nordic",
-        "url": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersABP-Inclusion.txt",
+        "urls": [
+            "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersABP-Inclusion.txt"
+        ],
         "out": "easynordic.json"
     },
     {
@@ -199,7 +235,9 @@
         "author": "",
         "category": "language",
         "language": "Lithuanian",
-        "url": "https://raw.githubusercontent.com/EasyList-Lithuania/easylist_lithuania/master/easylistlithuania.txt",
+        "urls": [
+            "https://raw.githubusercontent.com/EasyList-Lithuania/easylist_lithuania/master/easylistlithuania.txt"
+        ],
         "out": "easylithunia.json"
     },
     {
@@ -209,7 +247,9 @@
         "author": "",
         "category": "language",
         "language": "Spanish",
-        "url": "https://easylist-downloads.adblockplus.org/easylistspanish.txt",
+        "urls": [
+            "https://easylist-downloads.adblockplus.org/easylistspanish.txt"
+        ],
         "out": "easyspanish.json"
     },
     {
@@ -219,7 +259,9 @@
         "author": "",
         "category": "language",
         "language": "Portuguese",
-        "url": "https://easylist-downloads.adblockplus.org/easylistportuguese.txt",
+        "urls": [
+            "https://easylist-downloads.adblockplus.org/easylistportuguese.txt"
+        ],
         "out": "easypt.json"
     },
     {
@@ -229,7 +271,9 @@
         "author": "",
         "category": "language",
         "language": "Vietnamese",
-        "url": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt",
+        "urls": [
+            "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt"
+        ],
         "out": "easyvn.json"
     },
     {
@@ -239,7 +283,9 @@
         "author": "",
         "category": "language",
         "language": "Polski",
-        "url": "https://easylist-downloads.adblockplus.org/easylistpolish.txt",
+        "urls": [
+            "https://easylist-downloads.adblockplus.org/easylistpolish.txt"
+        ],
         "out": "easypolish.json"
     },
     {
@@ -249,7 +295,9 @@
         "author": "",
         "category": "language",
         "language": "Indian",
-        "url": "https://easylist-downloads.adblockplus.org/indianlist.txt",
+        "urls": [
+            "https://easylist-downloads.adblockplus.org/indianlist.txt"
+        ],
         "out": "easyindian.json"
     },
     {
@@ -259,7 +307,9 @@
         "author": "",
         "category": "language",
         "language": "Korean",
-        "url": "https://easylist-downloads.adblockplus.org/koreanlist.txt",
+        "urls": [
+            "https://easylist-downloads.adblockplus.org/koreanlist.txt"
+        ],
         "out": "easykorean.json"
     },
     {
@@ -269,7 +319,9 @@
         "author": "",
         "category": "language",
         "language": "Romanian",
-        "url": "https://www.zoso.ro/pages/rolist.txt",
+        "urls": [
+            "https://www.zoso.ro/pages/rolist.txt"
+        ],
         "out": "easyro.json"
     }
 ]
