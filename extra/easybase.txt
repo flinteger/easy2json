@@ -1,0 +1,4 @@
+stackoverflow.com##.js-consent-banner
+glowstery.com##.result.sponsored
+! hotmail right side ad.
+outlook.live.com##.LBktY > .GssDD
