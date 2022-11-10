@@ -1,3 +1,5 @@
 www.baidu.com##div[class=_2z1q32z]
 www.baidu.com##div[class*="result"]:has(a[href^="http://www.baidu.com/baidu.php"])
-www.iyf.tv##.small.video-container.cdk-drag-handle.cdk-drag
+iyf.tv##.small.video-container.cdk-drag-handle.cdk-drag
+iyf.tv##.ad
+v2ex.com##div[class="box"]:has(a[href$="/advertise"]
