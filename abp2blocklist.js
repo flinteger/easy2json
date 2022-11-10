@@ -18,33 +18,31 @@
 "use strict";
 
 let readline = require("readline");
-let {Filter} = require("./adblockpluscore/lib/filterClasses");
-let {ContentBlockerList} = require("./lib/abp2blocklist.js");
+let { Filter } = require("./adblockpluscore/lib/filterClasses");
+let { ContentBlockerList } = require("./lib/abp2blocklist.js");
 
-var rl = readline.createInterface({input: process.stdin, terminal: false});
-var blockerList = new ContentBlockerList({merge: "all"});
+var rl = readline.createInterface({ input: process.stdin, terminal: false });
+var blockerList = new ContentBlockerList({ merge: "all" });
 
-rl.on("line", line =>
-{
+rl.on("line", line => {
   if (/^\s*[^\[\s]/.test(line))
     blockerList.addFilter(Filter.fromText(Filter.normalize(line)));
 });
 
-rl.on("close", () =>
-{
-  blockerList.generateRules().then(rules =>
-  {
+rl.on("close", () => {
+  blockerList.generateRules().then(rules => {
     // If the rule set is too huge, JSON.stringify throws
     // "RangeError: Invalid string length" on Node.js. As a workaround, print
     // each rule individually.
-    console.log("[");
-    if (rules.length > 0)
-    {
-      let stringifyRule = rule => JSON.stringify(rule, null, "\t");
+    process.stdout.write("[");
+    if (rules.length > 0) {
+      // reduce white space in generated json file to save bandwidth and disk space.
+      // let stringifyRule = rule => JSON.stringify(rule, null, "\t");
+      let stringifyRule = rule => JSON.stringify(rule);
       for (let i = 0; i < rules.length - 1; i++)
-        console.log(stringifyRule(rules[i]) + ",");
-      console.log(stringifyRule(rules[rules.length - 1]));
+        process.stdout.write(stringifyRule(rules[i]) + ",");
+      process.stdout.write(stringifyRule(rules[rules.length - 1]));
     }
-    console.log("]");
+    process.stdout.write("]\n");
   });
 });

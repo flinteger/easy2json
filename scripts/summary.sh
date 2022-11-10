@@ -4,7 +4,6 @@ cd out
 
 for f in *json;
 do
-#   echo $f >> summary.txt
   count=$(echo $(grep action $f | wc -l))
   printf "%-22s: %s\n" $f $count
 done
