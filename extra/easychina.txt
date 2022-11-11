@@ -2,4 +2,8 @@ www.baidu.com##div[class=_2z1q32z]
 www.baidu.com##div[class*="result"]:has(a[href^="http://www.baidu.com/baidu.php"])
 iyf.tv##.small.video-container.cdk-drag-handle.cdk-drag
 iyf.tv##.ad
+v2ex.com#@#.fr > a[href^="https://www.digitalocean.com/"]
+v2ex.com#@#.sidebar_compliance
+v2ex.com#@#.sidebar_units
+v2ex.com#@#div[style][onclick*="geekhub."]
 v2ex.com##div[class="box"]:has(a[href$="/advertise"]
