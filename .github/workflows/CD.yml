@@ -45,7 +45,7 @@ jobs:
         echo "SHELL: $SHELL"
         echo "PATH: $PATH"
         df -h
-        os=$(uname -o)
+        os=$(uname -s)  # OS
         if [ "$os" = "Darwin" ]; then
           sysctl -n machdep.cpu.brand_string
         else
