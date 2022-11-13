@@ -37,6 +37,7 @@ def dump_rules_info(filepath: str):
 
 
 def process_list(list: dict):
+    id = list["id"]
     urls = list["urls"]
     out = list["out"]   # json output filename. e.g. easylist.json
     outjson = os.path.join("out", out)  # e.g. out/easylist.json
@@ -49,32 +50,36 @@ def process_list(list: dict):
         os.unlink(outtxt)
 
     merged = []     # merged rules
-    skipped = 0     # skipped rules count
+    total_skipped = 0     # skipped rules count
     for url in urls:
         logging.info(f"Downloading {url}")
         response = requests.get(url, timeout=30)
         if response.status_code != 200:
-            logging.error(f"Got error. status_code={response.status_code} url={url}")
+            logging.error(f"Got error. status_code={response.status_code} id={id} url={url}")
             return
 
         body = response.text
         lines = body.splitlines(keepends=False)
-        skipped += merge(merged, lines)
-        logging.info(f"Processed rules in {url}. skipped={skipped}")
+        skipped = merge(merged, lines)
+        total_skipped += skipped
+        logging.info(f"Processed rules in {url}. id={id} skipped={skipped} total_skipped={total_skipped}")
 
     if os.path.exists(extratxt):
         # Append extra rules if exist.
         logging.info(f"Merging {extratxt}")
         with open(extratxt) as f:
             list = f.readlines()
-            skipped += merge(merged, list)
+            skipped = merge(merged, list)
+            total_skipped += skipped
+
+    merged.append(f"||example.com/b/{id}|")
 
     with open(outtxt, "w") as f:
         f.write("\n".join(merged))
 
-    logging.info(f"Wrote {outtxt}, lines={len(merged)} skipped={skipped}")
+    logging.info(f"Wrote to {outtxt} successfully. id={id} lines={len(merged)} total_skipped={total_skipped}")
 
-    logging.info(f"Converting {outtxt} to {outjson}")
+    logging.info(f"Converting {outtxt} to {outjson}. id={id}")
     # subprocess.run(f"node abp2blocklist.js < {outtxt} > {outjson}", shell=True)
     subprocess.run(f"cat {outtxt} | ./bin/ConverterTool.Darwin -s 15 -o true -O {outjson}", shell=True)
 

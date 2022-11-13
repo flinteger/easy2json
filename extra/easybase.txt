@@ -1,5 +1,3 @@
-! test rule to verify this list is in use.
-||example.com/easybase|
 stackoverflow.com##.js-consent-banner
 glowstery.com##.result.sponsored
 ! hotmail right side ad.

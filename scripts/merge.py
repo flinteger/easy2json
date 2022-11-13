@@ -4,8 +4,10 @@ import sys
 from typing import List
 
 
-def merge(dest: List[str], list: List[str]):
-    """Merge `list` to `dest`
+def merge(dest: List[str], list: List[str]) -> int:
+    """Merge `list` to `dest`, remove duplicated lines in dest.
+
+    - Returns: skipped lines.
     """
     skipped = 0
     for line in list:

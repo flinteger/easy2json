@@ -1,5 +1,3 @@
-! test rule to verify this list is in use.
-||example.com/easychina|
 www.baidu.com##div[class=_2z1q32z]
 www.baidu.com#?#div[class*="result"]:-abp-has(a[href^="http://www.baidu.com/baidu.php"])
 iyf.tv##.small.video-container.cdk-drag-handle.cdk-drag
