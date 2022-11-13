@@ -33,7 +33,7 @@ def dump_rules_info(filepath: str):
                 if count > max_selector_count:
                     max_selector_count = count
 
-        print(f"rules_count={rules_count} max_if_domain_count={max_if_domain_count} max_unless_domain_count={max_unless_domain_count} max_selector_count={max_selector_count}")
+        print(f"file={filepath} rules_count={rules_count} max_if_domain_count={max_if_domain_count} max_unless_domain_count={max_unless_domain_count} max_selector_count={max_selector_count}")
 
 
 def process_list(list: dict):
