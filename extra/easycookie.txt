@@ -1,1 +1,3 @@
+! test rule to verify this list is in use.
+||example.com/easycookie|
 stackoverflow.com##.js-consent-banner

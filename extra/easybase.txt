@@ -1,4 +1,8 @@
+! test rule to verify this list is in use.
+||example.com/easybase|
 stackoverflow.com##.js-consent-banner
 glowstery.com##.result.sponsored
 ! hotmail right side ad.
 outlook.live.com##.LBktY > .GssDD
+yahoo.com###mrt-node-Col1-3-PencilAd
+yahoo.com##div[class="monalixa Pos(s) Bg(t) W(100%) Ai(c) Ta(c) M(a)"]

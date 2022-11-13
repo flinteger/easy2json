@@ -8,6 +8,34 @@ import subprocess
 from zipfile import ZipFile, ZIP_DEFLATED
 from merge import merge
 
+
+def dump_rules_info(filepath: str):
+    with open(filepath) as f:
+        rules = json.load(f)
+        rules_count = len(rules)
+        max_unless_domain_count = 0
+        max_if_domain_count = 0
+        max_selector_count = 0
+        for rule in rules:
+            trigger = rule["trigger"]
+            action = rule["action"]
+            if "if-domain" in trigger:
+                count = len(trigger["if-domain"])
+                if count > max_if_domain_count:
+                    max_if_domain_count = count
+            if "unless-domain" in trigger:
+                count = len(trigger["unless-domain"])
+                if count > max_unless_domain_count:
+                    max_unless_domain_count = count
+
+            if "selector" in action:
+                count = len(action["selector"].split(","))
+                if count > max_selector_count:
+                    max_selector_count = count
+
+        print(f"rules_count={rules_count} max_if_domain_count={max_if_domain_count} max_unless_domain_count={max_unless_domain_count} max_selector_count={max_selector_count}")
+
+
 def process_list(list: dict):
     urls = list["urls"]
     out = list["out"]   # json output filename. e.g. easylist.json
@@ -47,7 +75,10 @@ def process_list(list: dict):
     logging.info(f"Wrote {outtxt}, lines={len(merged)} skipped={skipped}")
 
     logging.info(f"Converting {outtxt} to {outjson}")
-    subprocess.run(f"node abp2blocklist.js < {outtxt} > {outjson}", shell=True)
+    # subprocess.run(f"node abp2blocklist.js < {outtxt} > {outjson}", shell=True)
+    subprocess.run(f"cat {outtxt} | ./bin/ConverterTool.Darwin -s 15 -o true -O {outjson}", shell=True)
+
+    dump_rules_info(outjson)
 
     if os.path.exists(outjson):
         # compress to reduce file size.
