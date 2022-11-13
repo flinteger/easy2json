@@ -45,8 +45,13 @@ jobs:
         echo "SHELL: $SHELL"
         echo "PATH: $PATH"
         df -h
-        cat /proc/cpuinfo
-        vmstat -S M
+        os=$(uname -o)
+        if [ "$os" = "Darwin" ]; then
+          sysctl -n machdep.cpu.brand_string
+        else
+          cat /proc/cpuinfo
+          vmstat -S M
+        fi
         python3 --version
         pip3 --version
         mkdir -p cache
