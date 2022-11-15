@@ -9,6 +9,25 @@ from zipfile import ZipFile, ZIP_DEFLATED
 from merge import merge
 
 
+def format_json_file(filepath: str):
+    """Re-format json to one rule per line."""
+    lines = []
+    rules = []
+
+    with open(filepath) as f:
+        rules = json.load(f)
+
+    for rule in rules:
+        # No need escape /
+        rule["trigger"]["url-filter"] = rule["trigger"]["url-filter"].replace("\\/", "/")
+        line = json.dumps(rule)
+        lines.append(line)
+
+    with open(filepath, "w") as f:
+        f.write(",\n".join(lines))
+        f.write(",\n")
+
+
 def dump_rules_info(filepath: str):
     with open(filepath) as f:
         rules = json.load(f)
@@ -84,6 +103,8 @@ def process_list(list: dict):
     subprocess.run(f"cat {outtxt} | ./bin/ConverterTool.Darwin -s 15 -o true -O {outjson}", shell=True)
 
     dump_rules_info(outjson)
+
+    format_json_file(outjson)
 
     if os.path.exists(outjson):
         # compress to reduce file size.
