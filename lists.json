@@ -60,10 +60,10 @@
         "out": "easyannonyance.json"
     },
     {
-        "name": "EasyCombined",
+        "name": "Essential Rules",
         "id": "easybase",
-        "title": "Base Rules",
-        "description": "TODO",
+        "title": "Essential Rules",
+        "description": "Essential Rules are a combination of EasyList, EasyPrivacy, EasyList Cookie List, Fanboy's Social Blocking and Fanboy's Annoyance List.\nEasyList removes most advertisements.\nEasyPrivacy removes all forms of tracking to protect your personal data.\nEasyList Cookie List blocks cookies banners, GDPR overlay windows and other privacy-related notices.\nFanboy's Social Blocking List solely removes Social Media content on web pages such as the Facebook like button and other widgets.\nFanboy's Annoyance List blocks Social Media content, in-page pop-ups and other annoyances; thereby substantially decreasing web page loading times and uncluttering them.",
         "category": "general",
         "urls": [
             "https://easylist.to/easylist/easylist.txt",
