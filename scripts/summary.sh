@@ -3,7 +3,7 @@
 cd out
 
 total=0
-for f in *json;
+for f in *.ndjson;
 do
   # count=$(echo $(grep action $f | wc -l))
   # count=$(jq '. | length' $f)
@@ -12,7 +12,7 @@ do
   printf "%-22s: %s\n" $f $count
 done
 
-total=$(cat *.json | sort | uniq | wc -l | awk '{ print $1 }')
+total=$(cat *.ndjson | sort | uniq | wc -l | awk '{ print $1 }')
 
 echo ""
 printf "%-22s: %s\n" "Total rules" $total

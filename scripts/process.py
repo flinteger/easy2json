@@ -10,7 +10,7 @@ from merge import merge
 
 
 def format_json_file(filepath: str):
-    """Re-format json to one rule per line."""
+    """Re-format json to ndjson."""
     lines = []
     rules = []
 
@@ -20,12 +20,12 @@ def format_json_file(filepath: str):
     for rule in rules:
         # No need escape /
         rule["trigger"]["url-filter"] = rule["trigger"]["url-filter"].replace("\\/", "/")
-        line = json.dumps(rule)
+        line = json.dumps(rule, separators=(',', ':'), sort_keys=True)  # dump into a single line without any space.
         lines.append(line)
 
     with open(filepath, "w") as f:
-        f.write(",\n".join(lines))
-        f.write(",\n")
+        f.write("\n".join(lines))
+        f.write("\n")
 
 
 def dump_rules_info(filepath: str):

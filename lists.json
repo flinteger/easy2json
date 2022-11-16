@@ -9,7 +9,7 @@
         "urls": [
             "https://easylist.to/easylist/easylist.txt"
         ],
-        "out": "easylist.json"
+        "out": "easylist.ndjson"
     },
     {
         "name": "EasyPrivacy",
@@ -21,7 +21,7 @@
         "urls": [
             "https://easylist.to/easylist/easyprivacy.txt"
         ],
-        "out": "easyprivacy.json"
+        "out": "easyprivacy.ndjson"
     },
     {
         "name": "EasyList Cookie List",
@@ -33,7 +33,7 @@
         "urls": [
             "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt"
         ],
-        "out": "easycookie.json"
+        "out": "easycookie.ndjson"
     },
     {
         "name": "Fanboy's Social Blocking List",
@@ -45,7 +45,7 @@
         "urls": [
             "https://easylist.to/easylist/fanboy-social.txt"
         ],
-        "out": "easysocial.json"
+        "out": "easysocial.ndjson"
     },
     {
         "name": "Fanboy's Annoyance List",
@@ -57,7 +57,7 @@
         "urls": [
             "https://secure.fanboy.co.nz/fanboy-annoyance.txt"
         ],
-        "out": "easyannonyance.json"
+        "out": "easyannonyance.ndjson"
     },
     {
         "name": "Essential Rules",
@@ -70,7 +70,7 @@
             "https://easylist.to/easylist/easyprivacy.txt",
             "https://secure.fanboy.co.nz/fanboy-annoyance.txt"
         ],
-        "out": "easybase.json"
+        "out": "easybase.ndjson"
     },
     {
         "name": "EasyList Germany",
@@ -82,7 +82,7 @@
         "urls": [
             "https://easylist.to/easylistgermany/easylistgermany.txt"
         ],
-        "out": "easygermany.json"
+        "out": "easygermany.ndjson"
     },
     {
         "name": "EasyList Italy",
@@ -94,7 +94,7 @@
         "urls": [
             "https://easylist-downloads.adblockplus.org/easylistitaly.txt"
         ],
-        "out": "easyitaly.json"
+        "out": "easyitaly.ndjson"
     },
     {
         "name": "EasyList Dutch",
@@ -106,7 +106,7 @@
         "urls": [
             "https://easylist-downloads.adblockplus.org/easylistdutch.txt"
         ],
-        "out": "easydutch.json"
+        "out": "easydutch.ndjson"
     },
     {
         "name": "Liste FR",
@@ -118,7 +118,7 @@
         "urls": [
             "https://easylist-downloads.adblockplus.org/liste_fr.txt"
         ],
-        "out": "easyfrench.json"
+        "out": "easyfrench.ndjson"
     },
     {
         "name": "EasyList China",
@@ -130,7 +130,7 @@
         "urls": [
             "https://easylist-downloads.adblockplus.org/easylistchina.txt"
         ],
-        "out": "easychina.json"
+        "out": "easychina.ndjson"
     },
     {
         "name": "RU AdList",
@@ -140,9 +140,9 @@
         "category": "language",
         "language": "Russia, Ukrainian",
         "urls": [
-            "https://easylist-downloads.adblockplus.org/advblock.txt"
+            "https://easylist-downloads.adblockplus.org/ruadlist.txt"
         ],
-        "out": "easyru.json"
+        "out": "easyru.ndjson"
     },
     {
         "name": "Bulgarian list",
@@ -154,7 +154,7 @@
         "urls": [
             "http://stanev.org/abp/adblock_bg.txt"
         ],
-        "out": "easybg.json"
+        "out": "easybg.ndjson"
     },
     {
         "name": "ABPindo",
@@ -166,7 +166,7 @@
         "urls": [
             "https://raw.githubusercontent.com/heradhis/indonesianadblockrules/master/subscriptions/abpindo.txt"
         ],
-        "out": "easyindo.json"
+        "out": "easyindo.ndjson"
     },
     {
         "name": "Liste AR",
@@ -178,7 +178,7 @@
         "urls": [
             "https://easylist-downloads.adblockplus.org/Liste_AR.txt"
         ],
-        "out": "easyar.json"
+        "out": "easyar.ndjson"
     },
     {
         "name": "EasyList Czech and Slovak",
@@ -190,7 +190,7 @@
         "urls": [
             "https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt"
         ],
-        "out": "easyczechslovak.json"
+        "out": "easyczechslovak.ndjson"
     },
     {
         "name": "Latvian List",
@@ -202,7 +202,7 @@
         "urls": [
             "https://raw.githubusercontent.com/Latvian-List/adblock-latvian/master/lists/latvian-list.txt"
         ],
-        "out": "easylatvian.json"
+        "out": "easylatvian.ndjson"
     },
     {
         "name": "EasyList Hebrew",
@@ -214,7 +214,7 @@
         "urls": [
             "https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt"
         ],
-        "out": "easyhebrew.json"
+        "out": "easyhebrew.ndjson"
     },
     {
         "name": "Dandelion Sprout's Nordic Filters",
@@ -226,7 +226,7 @@
         "urls": [
             "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersABP-Inclusion.txt"
         ],
-        "out": "easynordic.json"
+        "out": "easynordic.ndjson"
     },
     {
         "name": "EasyList Lithuania",
@@ -238,7 +238,7 @@
         "urls": [
             "https://raw.githubusercontent.com/EasyList-Lithuania/easylist_lithuania/master/easylistlithuania.txt"
         ],
-        "out": "easylithunia.json"
+        "out": "easylithunia.ndjson"
     },
     {
         "name": "EasyList Spanish",
@@ -250,7 +250,7 @@
         "urls": [
             "https://easylist-downloads.adblockplus.org/easylistspanish.txt"
         ],
-        "out": "easyspanish.json"
+        "out": "easyspanish.ndjson"
     },
     {
         "name": "EasyList Portuguese",
@@ -262,7 +262,7 @@
         "urls": [
             "https://easylist-downloads.adblockplus.org/easylistportuguese.txt"
         ],
-        "out": "easypt.json"
+        "out": "easypt.ndjson"
     },
     {
         "name": "ABPVN List",
@@ -274,7 +274,7 @@
         "urls": [
             "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt"
         ],
-        "out": "easyvn.json"
+        "out": "easyvn.ndjson"
     },
     {
         "name": "EasyList Polish",
@@ -286,7 +286,7 @@
         "urls": [
             "https://easylist-downloads.adblockplus.org/easylistpolish.txt"
         ],
-        "out": "easypolish.json"
+        "out": "easypolish.ndjson"
     },
     {
         "name": "IndianList",
@@ -298,7 +298,7 @@
         "urls": [
             "https://easylist-downloads.adblockplus.org/indianlist.txt"
         ],
-        "out": "easyindian.json"
+        "out": "easyindian.ndjson"
     },
     {
         "name": "KoreanList",
@@ -310,7 +310,7 @@
         "urls": [
             "https://easylist-downloads.adblockplus.org/koreanlist.txt"
         ],
-        "out": "easykorean.json"
+        "out": "easykorean.ndjson"
     },
     {
         "name": "ROList",
@@ -322,6 +322,6 @@
         "urls": [
             "https://www.zoso.ro/pages/rolist.txt"
         ],
-        "out": "easyro.json"
+        "out": "easyro.ndjson"
     }
 ]
