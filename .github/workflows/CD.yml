@@ -90,11 +90,10 @@ jobs:
 
         rm -fr lists
         mkdir -p lists
-        cp -fv lists.json out/*.zip out/summary.txt lists/
+        cp -fv out/lists.json out/*.zip out/summary.txt lists/
 
         now=$(date +%s)
-        echo $now > lists/version.txt
-        cp -fv lists/version.txt index.html
+        echo $now > index.html
         git add lists LICENSE-CC-BY-3.0.txt index.html
         git commit -m "Update lists to $now" lists LICENSE-CC-BY-3.0.txt index.html
         echo "now=$now"

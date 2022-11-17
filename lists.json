@@ -3,6 +3,7 @@
         "name": "EasyList",
         "title": "Ad Blocking",
         "id": "easylist",
+        "priority": 10,
         "description": "EasyList is the primary filter list that removes most adverts from international webpages, including unwanted frames, images and objects. It is the most popular list used by many ad blockers and forms the basis of over a dozen combination and supplementary filter lists.",
         "author": "",
         "category": "general",
@@ -15,6 +16,7 @@
         "name": "EasyPrivacy",
         "title": "Privacy",
         "id": "easyprivacy",
+        "priority": 20,
         "description": "EasyPrivacy is an optional supplementary filter list that completely removes all forms of tracking from the internet, including web bugs, tracking scripts and information collectors, thereby protecting your personal data.",
         "author": "",
         "category": "privacy",
@@ -27,6 +29,7 @@
         "name": "EasyList Cookie List",
         "title": "Cookie Notice",
         "id": "easycookie",
+        "priority": 20,
         "description": "EasyList Cookie List blocks cookies banners, GDPR overlay windows and other privacy-related notices.",
         "author": "Fanboy",
         "category": "privacy",
@@ -39,6 +42,7 @@
         "name": "Fanboy's Social Blocking List",
         "title": "Social Blocking",
         "id": "easysocial",
+        "priority": 20,
         "description": "Fanboy's Social Blocking List solely removes Social Media content on web pages such as the Facebook like button and other widgets.",
         "author": "Fanboy",
         "category": "general",
@@ -51,6 +55,7 @@
         "name": "Fanboy's Annoyance List",
         "title": "Annoyance",
         "id": "easyannoyance",
+        "priority": 20,
         "description": "Fanboy's Annoyance List blocks Social Media content, in-page pop-ups and other annoyances; thereby substantially decreasing web page loading times and uncluttering them. EasyList Cookie List and Fanboy's Social Blocking List are already included, there is no need to subscribe to them if you already have Fanboy's Annoyance List.",
         "author": "Fanboy",
         "category": "general",
@@ -62,12 +67,15 @@
     {
         "name": "Essential Rules",
         "id": "easybase",
+        "priority": 30,
         "title": "Essential Rules",
         "description": "Essential Rules are a combination of EasyList, EasyPrivacy, EasyList Cookie List, Fanboy's Social Blocking and Fanboy's Annoyance List.\nEasyList removes most advertisements.\nEasyPrivacy removes all forms of tracking to protect your personal data.\nEasyList Cookie List blocks cookies banners, GDPR overlay windows and other privacy-related notices.\nFanboy's Social Blocking List solely removes Social Media content on web pages such as the Facebook like button and other widgets.\nFanboy's Annoyance List blocks Social Media content, in-page pop-ups and other annoyances; thereby substantially decreasing web page loading times and uncluttering them.",
         "category": "general",
         "urls": [
             "https://easylist.to/easylist/easylist.txt",
             "https://easylist.to/easylist/easyprivacy.txt",
+            "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+            "https://easylist.to/easylist/fanboy-social.txt",
             "https://secure.fanboy.co.nz/fanboy-annoyance.txt"
         ],
         "out": "easybase.ndjson"
@@ -75,6 +83,7 @@
     {
         "name": "EasyList Germany",
         "id": "de",
+        "priority": 40,
         "description": "EasyList Germany is a filter list written by the EasyList authors MonztA, Famlam and Khrin that specifically removes adverts on German language websites.",
         "author": "",
         "category": "language",
@@ -87,6 +96,7 @@
     {
         "name": "EasyList Italy",
         "id": "it",
+        "priority": 40,
         "description": "EasyList Italy is a filter list written by the EasyList author Khrin that specifically removes adverts on Italian language websites.",
         "author": "",
         "category": "language",
@@ -99,6 +109,7 @@
     {
         "name": "EasyList Dutch",
         "id": "dutch",
+        "priority": 40,
         "description": "EasyList Dutch is an affiliated filter list written by the EasyList author Famlam that specifically removes adverts on Dutch language websites.",
         "author": "",
         "category": "language",
@@ -111,6 +122,7 @@
     {
         "name": "Liste FR",
         "id": "fr",
+        "priority": 40,
         "description": "Liste FR is an affiliated filter list written by Lian, Crits and smed79 that specifically removes adverts on French language websites.",
         "author": "",
         "category": "language",
@@ -123,6 +135,7 @@
     {
         "name": "EasyList China",
         "id": "cn",
+        "priority": 40,
         "description": "EasyList China is an affiliated filter list written by John and Li that specifically removes adverts on Chinese language websites.",
         "author": "",
         "category": "language",
@@ -135,6 +148,7 @@
     {
         "name": "RU AdList",
         "id": "ru",
+        "priority": 40,
         "description": "RU AdList is an affiliated filter list written by Lain_13 and dimisa that specifically removes adverts on русский, українська language websites.",
         "author": "",
         "category": "language",
@@ -147,6 +161,7 @@
     {
         "name": "Bulgarian list",
         "id": "bg",
+        "priority": 40,
         "description": "Bulgarian list is an affiliated filter list written by Alex that specifically removes adverts on Bulgarian language websites.",
         "author": "",
         "category": "language",
@@ -159,6 +174,7 @@
     {
         "name": "ABPindo",
         "id": "indo",
+        "priority": 40,
         "description": "ABPindo is an affiliated filter list written by hermawan that specifically removes adverts on Indonesian language websites.",
         "author": "",
         "category": "language",
@@ -171,6 +187,7 @@
     {
         "name": "Liste AR",
         "id": "ar",
+        "priority": 40,
         "description": "Liste AR is an affiliated filter list written by smed79 and Crits that specifically removes adverts on Arabic language websites.",
         "author": "",
         "category": "language",
@@ -183,6 +200,7 @@
     {
         "name": "EasyList Czech and Slovak",
         "id": "cz-sk",
+        "priority": 40,
         "description": "EasyList Czech and Slovak is an affiliated filter list written by tomasko126 that specifically removes adverts on Czech and Slovak language websites.",
         "author": "",
         "category": "language",
@@ -195,6 +213,7 @@
     {
         "name": "Latvian List",
         "id": "lv",
+        "priority": 40,
         "description": "Latvian List is an affiliated filter list written by anonymous74100 that specifically removes adverts on Latvian language websites.",
         "author": "",
         "category": "language",
@@ -207,6 +226,7 @@
     {
         "name": "EasyList Hebrew",
         "id": "hebrew",
+        "priority": 40,
         "description": "EasyList Hebrew is an affiliated filter list written by BsT that specifically removes adverts on Hebrew language websites.",
         "author": "",
         "category": "language",
@@ -219,6 +239,7 @@
     {
         "name": "Dandelion Sprout's Nordic Filters",
         "id": "nordic",
+        "priority": 40,
         "description": "Dandelion Sprout's Nordic Filters is an affiliated filter list written by Imre Kristoffer Eilertsen that specifically removes adverts on norsk, norsk, norsk, dansk, íslenska, føroyskt, kalaallisut, suomi language websites.",
         "author": "",
         "category": "language",
@@ -231,6 +252,7 @@
     {
         "name": "EasyList Lithuania",
         "id": "lt",
+        "priority": 40,
         "description": "EasyList Lithuania is an affiliated filter list written by Imre Kristoffer Eilertsen that specifically removes adverts on Lithuanian language websites.",
         "author": "",
         "category": "language",
@@ -243,6 +265,7 @@
     {
         "name": "EasyList Spanish",
         "id": "sp",
+        "priority": 40,
         "description": "EasyList Spanish is an affiliated filter list written by Felippe Santos that specifically removes adverts on español language websites.",
         "author": "",
         "category": "language",
@@ -255,6 +278,7 @@
     {
         "name": "EasyList Portuguese",
         "id": "pt",
+        "priority": 40,
         "description": "EasyList Portuguese is an affiliated filter list written by Felippe Santos that specifically removes adverts on português language websites.",
         "author": "",
         "category": "language",
@@ -267,6 +291,7 @@
     {
         "name": "ABPVN List",
         "id": "vn",
+        "priority": 40,
         "description": "ABPVN List is an affiliated filter list written by Hoàng Rio that specifically removes adverts on Tiếng Việt language websites.",
         "author": "",
         "category": "language",
@@ -279,6 +304,7 @@
     {
         "name": "EasyList Polish",
         "id": "pl",
+        "priority": 40,
         "description": "EasyList Polish is an affiliated filter list written by bartoszsobkowiak and mateuszfranckiewicz that specifically removes adverts on polski language websites.",
         "author": "",
         "category": "language",
@@ -291,6 +317,7 @@
     {
         "name": "IndianList",
         "id": "in",
+        "priority": 40,
         "description": "IndianList is an affiliated filter list written by mediumkreation that specifically removes adverts on বাংলা (ভারত), ગુજરાતી (ભારત), भारतीय, ਪੰਜਾਬੀ (ਭਾਰਤ), অসমীয়া, मराठी, മലയാളം, తెలుగు, ಕನ್ನಡ, ଓଡ଼ିଆ, नेपाली, සිංහල language websites.",
         "author": "",
         "category": "language",
@@ -303,6 +330,7 @@
     {
         "name": "KoreanList",
         "id": "ko",
+        "priority": 40,
         "description": "KoreanList is an affiliated filter list written by Mark Choi that specifically removes adverts on 한국어 language websites.",
         "author": "",
         "category": "language",
@@ -315,6 +343,7 @@
     {
         "name": "ROList",
         "id": "ro",
+        "priority": 40,
         "description": "ROList is an affiliated filter list written by MenetZ and Zoso that specifically removes adverts on românesc language websites.",
         "author": "",
         "category": "language",

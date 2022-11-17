@@ -1,12 +1,48 @@
 #!/usr/bin/env python3
 
-import os
-import logging
+import datetime
 import json
-import requests
+import logging
+import os
 import subprocess
-from zipfile import ZipFile, ZIP_DEFLATED
+from typing import List
+from zipfile import ZIP_DEFLATED, ZipFile
+
+import requests
 from merge import merge
+
+
+def parse_metadata(lines: List[str]) -> dict:
+    """
+    Example metadata
+
+    [Adblock Plus 2.0]
+    ! Checksum: 8Utys+Cpw0P+1E1zjU2ocg
+    ! Version: 202211170341
+    ! Title: KoreanList
+    ! Last modified: 17 Nov 2022 03:41 UTC
+    ! Expires: 1 days (update frequency)
+    ! Homepage: https://forums.lanik.us/viewforum.php?f=111
+    ! Licence: https://easylist.to/pages/licence.html
+    !
+
+    Not all the list have metadata.
+    """
+    metadata = {}
+    max = 100
+    i = 0
+    for line in lines:
+        if line.startswith("! Last modified: "):
+            (_, value) = line.split(": ", 1)
+            last_modified = datetime.datetime.strptime(value, "%d %b %Y %H:%M %Z")
+            metadata["updated_ts"] = last_modified.timestamp()
+            break
+
+        i += 1
+        if i == max:
+            break
+
+    return metadata
 
 
 def format_json_file(filepath: str):
@@ -28,7 +64,8 @@ def format_json_file(filepath: str):
         f.write("\n")
 
 
-def dump_rules_info(filepath: str):
+def dump_rules_info(filepath: str) -> int:
+    """Returns total rules count."""
     with open(filepath) as f:
         rules = json.load(f)
         rules_count = len(rules)
@@ -53,6 +90,7 @@ def dump_rules_info(filepath: str):
                     max_selector_count = count
 
         print(f"file={filepath} rules_count={rules_count} max_if_domain_count={max_if_domain_count} max_unless_domain_count={max_unless_domain_count} max_selector_count={max_selector_count}")
+        return rules_count
 
 
 def process_list(list: dict):
@@ -78,7 +116,10 @@ def process_list(list: dict):
             return
 
         body = response.text
-        lines = body.splitlines(keepends=False)
+        lines = body.splitlines(keepends=False)  # lines without '\n'
+
+        # metadata = parse_metadata(lines)
+
         skipped = merge(merged, lines)
         total_skipped += skipped
         logging.info(f"Processed rules in {url}. id={id} skipped={skipped} total_skipped={total_skipped}")
@@ -87,8 +128,7 @@ def process_list(list: dict):
         # Append extra rules if exist.
         logging.info(f"Merging {extratxt}")
         with open(extratxt) as f:
-            list = f.readlines()
-            skipped = merge(merged, list)
+            skipped = merge(merged, f.readlines())
             total_skipped += skipped
 
     merged.append(f"||example.com/b/{id}|")
@@ -96,13 +136,14 @@ def process_list(list: dict):
     with open(outtxt, "w") as f:
         f.write("\n".join(merged))
 
-    logging.info(f"Wrote to {outtxt} successfully. id={id} lines={len(merged)} total_skipped={total_skipped}")
+    original_rules_count = len(merged)
+    logging.info(f"Wrote to {outtxt} successfully. id={id} lines={original_rules_count} total_skipped={total_skipped}")
 
     logging.info(f"Converting {outtxt} to {outjson}. id={id}")
     # subprocess.run(f"node abp2blocklist.js < {outtxt} > {outjson}", shell=True)
     subprocess.run(f"cat {outtxt} | ./bin/ConverterTool.Darwin -s 15 -o true -O {outjson}", shell=True)
 
-    dump_rules_info(outjson)
+    rules_count = dump_rules_info(outjson)
 
     format_json_file(outjson)
 
@@ -111,11 +152,17 @@ def process_list(list: dict):
         with ZipFile(f"{outjson}.zip", "w", ZIP_DEFLATED) as zip:
             zip.write(outjson, out)
 
+    now = datetime.datetime.now()
+    list["updated_ts"] = int(now.timestamp())
+    list["original_rules_count"] = original_rules_count
+    list["json_rules_count"] = rules_count
 
 def process(lists: dict):
     for list in lists:
         process_list(list)
 
+    with open(f"out/lists.json", "w") as f:
+        json.dump(lists, f)
 
 def setup_logging():
     datefmt = "%Y-%m-%dT%H:%M:%S%Z"
