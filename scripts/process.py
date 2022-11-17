@@ -153,16 +153,18 @@ def process_list(list: dict):
             zip.write(outjson, out)
 
     now = datetime.datetime.now()
-    list["updated_ts"] = int(now.timestamp())
+    list["created_ts"] = int(now.timestamp())
     list["original_rules_count"] = original_rules_count
     list["json_rules_count"] = rules_count
+
 
 def process(lists: dict):
     for list in lists:
         process_list(list)
 
     with open(f"out/lists.json", "w") as f:
-        json.dump(lists, f)
+        json.dump(lists, f, ensure_ascii=False, sort_keys=True)
+
 
 def setup_logging():
     datefmt = "%Y-%m-%dT%H:%M:%S%Z"
@@ -174,6 +176,7 @@ def setup_logging():
         level=logging.INFO,
         datefmt=datefmt,
         format=format)
+
 
 def main():
     setup_logging()
