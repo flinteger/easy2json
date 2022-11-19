@@ -4,3 +4,4 @@ glowstery.com##.result.sponsored
 outlook.live.com##.LBktY > .GssDD
 yahoo.com###mrt-node-Col1-3-PencilAd
 yahoo.com##div[class="monalixa Pos(s) Bg(t) W(100%) Ai(c) Ta(c) M(a)"]
+twitter.com##div[data-testid=placementTracking]
