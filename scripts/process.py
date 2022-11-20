@@ -2,6 +2,7 @@
 
 import datetime
 import json
+import hashlib
 import logging
 import os
 import subprocess
@@ -149,8 +150,14 @@ def process_list(list: dict):
 
     if os.path.exists(outjson):
         # compress to reduce file size.
-        with ZipFile(f"{outjson}.zip", "w", ZIP_DEFLATED) as zip:
+        out_zip = f"{outjson}.zip"
+        with ZipFile(out_zip, "w", ZIP_DEFLATED) as zip:
             zip.write(outjson, out)
+
+        with open(out_zip, "rb") as f:
+            # digest = hashlib.file_digest(f, "sha256")  # requires Python 3.11
+            digest = hashlib.sha256(f.read())
+            list["digest"] = digest.hexdigest()
 
     now = datetime.datetime.now()
     list["created_ts"] = int(now.timestamp())
