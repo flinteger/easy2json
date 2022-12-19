@@ -4,3 +4,10 @@ iyf.tv##.small.video-container.cdk-drag-handle.cdk-drag
 iyf.tv##.ad
 v2ex.com#?#div[class="box"]:-abp-has(a[href$="/advertise"]
 v2ex.com##.wwads-cn
+! 浮动按钮：百度App内阅读
+m.baidu.com##.tgSGud4cOeqca.tgSGu315Oeqca
+www.baidu.com##.tgSGud4cOeqca
+
+! 浮动按钮：百度App内观看
+www.baidu.com##.bottomBtn
+
