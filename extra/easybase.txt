@@ -8,3 +8,6 @@ twitter.com##div[data-testid=placementTracking]
 ! google.com overflow
 www.google.com##mobile-promo
 www.google.com##div[jsname="haAclf"]
+! quora.com overflow
+quora.com##div[style="box-sizing: border-box; display: flex; width: 100%; opacity: 0.95; position: fixed; z-index: 300; left: 0px; right: 0px; bottom: 0px;"]
+quora.com##div[class="q-box dom_annotate_ad_promoted_answer"]
