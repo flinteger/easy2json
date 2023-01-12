@@ -1,0 +1,30 @@
+easyannonyance.ndjson : 17632
+easyar.ndjson         : 1577
+easybase.ndjson       : 81841
+easybg.ndjson         : 860
+easychina.ndjson      : 17315
+easycookie.ndjson     : 6161
+easyczechslovak.ndjson: 368
+easydutch.ndjson      : 787
+easyfrench.ndjson     : 19585
+easygermany.ndjson    : 3476
+easyhebrew.ndjson     : 831
+easyindian.ndjson     : 7727
+easyindo.ndjson       : 4412
+easyitaly.ndjson      : 7885
+easykorean.ndjson     : 847
+easylatvian.ndjson    : 248
+easylist.ndjson       : 35435
+easylithunia.ndjson   : 858
+easynordic.ndjson     : 3634
+easypolish.ndjson     : 1694
+easyprivacy.ndjson    : 29590
+easypt.ndjson         : 861
+easyro.ndjson         : 310
+easyru.ndjson         : 20384
+easysocial.ndjson     : 6024
+easyspanish.ndjson    : 1980
+easyvn.ndjson         : 4412
+
+Total rules           : 178743
+
