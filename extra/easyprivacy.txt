@@ -1,0 +1,2 @@
+! unblock bing search result redirect
+@@||bing.com/fd/ls/GLinkPing.aspx?
