@@ -7,7 +7,7 @@ v2ex.com##.wwads-cn
 ! 浮动按钮：百度App内阅读
 m.baidu.com##.tgSGud4cOeqca.tgSGu315Oeqca
 www.baidu.com##.tgSGud4cOeqca
+www.baidu.com##.EcC-sRd4cFvunP
 
 ! 浮动按钮：百度App内观看
 www.baidu.com##.bottomBtn
-
