@@ -68,6 +68,7 @@ jobs:
 
     - name: Process lists
       run: |
+        ls -l
         ./scripts/get_top1m.sh
         ./scripts/process.py
 
