@@ -11,6 +11,7 @@ from zipfile import ZIP_DEFLATED, ZipFile
 
 import requests
 from merge import merge
+from preprocess import preprocess
 
 
 def parse_metadata(lines: List[str]) -> dict:
@@ -137,8 +138,12 @@ def process_list(list: dict):
     with open(outtxt, "w") as f:
         f.write("\n".join(merged))
 
+    final_rules_count = preprocess(outtxt)
+
     original_rules_count = len(merged)
-    logging.info(f"Wrote to {outtxt} successfully. id={id} lines={original_rules_count} total_skipped={total_skipped}")
+    skipped_non_top1m = original_rules_count - final_rules_count
+
+    logging.info(f"Wrote to {outtxt} successfully. id={id} original_rules_count={original_rules_count} final_rules_count={final_rules_count} total_skipped={total_skipped} skipped_non_top1m={skipped_non_top1m}")
 
     logging.info(f"Converting {outtxt} to {outjson}. id={id}")
     # subprocess.run(f"node abp2blocklist.js < {outtxt} > {outjson}", shell=True)
